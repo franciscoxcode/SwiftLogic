@@ -19,11 +19,20 @@ import Foundation
 //print(heightAsInt)
 //print(type(of: heightAsInt))
 
-let connected: Bool = true
-let connectedAsString: String = String(connected)
+//let connected: Bool = true
+//let connectedAsString: String = String(connected)
+//
+//print(connected)
+//print(type(of: connected))
+//
+//print(connectedAsString)
+//print(type(of: connectedAsString))
 
-print(connected)
-print(type(of: connected))
+let numberAsString: String = "42"
+let number: Int? = Int(numberAsString)
 
-print(connectedAsString)
-print(type(of: connectedAsString))
+print(numberAsString)
+print(type(of: numberAsString))
+
+print(number)
+print(type(of: number))
