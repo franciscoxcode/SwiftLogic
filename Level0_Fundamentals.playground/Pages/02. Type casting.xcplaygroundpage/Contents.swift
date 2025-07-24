@@ -28,11 +28,18 @@ import Foundation
 //print(connectedAsString)
 //print(type(of: connectedAsString))
 
-let numberAsString: String = "42"
-let number: Int? = Int(numberAsString)
+//let numberAsString: String = "42"
+//let number: Int? = Int(numberAsString)
+//
+//print(numberAsString)
+//print(type(of: numberAsString))
+//
+//print(number)
+//print(type(of: number))
 
-print(numberAsString)
-print(type(of: numberAsString))
+let greeting = "hola"
 
-print(number)
-print(type(of: number))
+let greetingAsNumber = Int(greeting)
+
+print(greetingAsNumber)
+print(type(of: greetingAsNumber))
