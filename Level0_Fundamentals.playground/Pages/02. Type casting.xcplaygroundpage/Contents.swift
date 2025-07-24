@@ -10,11 +10,20 @@ import Foundation
 //print(ageAsString)
 //print(type(of: ageAsString))
 
-let height: Double = 1.78
-let heightAsInt: Int = Int(height)
+//let height: Double = 1.78
+//let heightAsInt: Int = Int(height)
+//
+//print(height)
+//print(type(of: height))
+//
+//print(heightAsInt)
+//print(type(of: heightAsInt))
 
-print(height)
-print(type(of: height))
+let connected: Bool = true
+let connectedAsString: String = String(connected)
 
-print(heightAsInt)
-print(type(of: heightAsInt))
+print(connected)
+print(type(of: connected))
+
+print(connectedAsString)
+print(type(of: connectedAsString))
