@@ -25,12 +25,28 @@ let letras = ["A", "B", "C"]
 //    print(letras[5])
 //}
 
-let planetas = ["Mercurio", "Venus", "Tierra", "Marte"]
+//let planetas = ["Mercurio", "Venus", "Tierra", "Marte"]
+//
+//// 1. Imprime el primer planeta usando índices.
+//// 2. Imprime el último planeta usando `.count`.
+//// 3. Imprime el último planeta usando `.last` de forma segura.
+//
+//print(planetas[0])
+//print(planetas[planetas.count - 1])
+//print(planetas.last!)
 
-// 1. Imprime el primer planeta usando índices.
-// 2. Imprime el último planeta usando `.count`.
-// 3. Imprime el último planeta usando `.last` de forma segura.
+let listaVacia: [String] = []
 
-print(planetas[0])
-print(planetas[planetas.count - 1])
-print(planetas.last!)
+// 1. ¿Qué pasa si haces print(listaVacia[0])?
+// 2. Usa `.first` para imprimir el primer elemento si existe.
+// 3. Usa `.indices.contains(0)` para acceder de forma segura.
+
+print(listaVacia[0])
+
+if let first = listaVacia.first {
+    print(first)
+}
+
+if listaVacia.indices.contains(0){
+    print(listaVacia[0])
+}
