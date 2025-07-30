@@ -51,13 +51,27 @@ let letras = ["A", "B", "C"]
 //    print(listaVacia[0])
 //}
 
-let pasos = ["Inicio", "Carga", "Proceso", "Final"]
+//let pasos = ["Inicio", "Carga", "Proceso", "Final"]
+//
+//// 1. Imprime el penúltimo paso (sin hardcodear el índice).
+//// 2. Hazlo solo si el array tiene al menos 2 elementos.
+//
+//print(pasos[pasos.count - 2])
+//
+//if pasos.count >= 2 {
+//    print(pasos[pasos.count - 2])
+//}
 
-// 1. Imprime el penúltimo paso (sin hardcodear el índice).
-// 2. Hazlo solo si el array tiene al menos 2 elementos.
+let array1 = ["🧡", "💛", "💚"]
+let array2 = ["🐱", "🐶"]
 
-print(pasos[pasos.count - 2])
+// 1. Imprime el último de array1 y el primero de array2.
+// 2. Hazlo solo si ambos arrays **no están vacíos**.
 
-if pasos.count >= 2 {
-    print(pasos[pasos.count - 2])
+if let ultimo = array1.last {
+    print(ultimo)
+}
+
+if let first = array2.first {
+    print(first)
 }
