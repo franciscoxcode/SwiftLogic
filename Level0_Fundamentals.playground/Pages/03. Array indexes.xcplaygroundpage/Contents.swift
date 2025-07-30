@@ -62,16 +62,16 @@ let letras = ["A", "B", "C"]
 //    print(pasos[pasos.count - 2])
 //}
 
-let array1 = ["🧡", "💛", "💚"]
-let array2 = ["🐱", "🐶"]
-
-// 1. Imprime el último de array1 y el primero de array2.
-// 2. Hazlo solo si ambos arrays **no están vacíos**.
-
-if let ultimo = array1.last {
-    print(ultimo)
-}
-
-if let first = array2.first {
-    print(first)
-}
+//let array1 = ["🧡", "💛", "💚"]
+//let array2 = ["🐱", "🐶"]
+//
+//// 1. Imprime el último de array1 y el primero de array2.
+//// 2. Hazlo solo si ambos arrays **no están vacíos**.
+//
+//if let ultimo = array1.last {
+//    print(ultimo)
+//}
+//
+//if let first = array2.first {
+//    print(first)
+//}
