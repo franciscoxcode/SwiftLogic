@@ -37,9 +37,9 @@ import Foundation
 //print(number)
 //print(type(of: number))
 
-let greeting = "hola"
-
-let greetingAsNumber = Int(greeting)
-
-print(greetingAsNumber)
-print(type(of: greetingAsNumber))
+//let greeting = "hola"
+//
+//let greetingAsNumber = Int(greeting)
+//
+//print(greetingAsNumber)
+//print(type(of: greetingAsNumber))
