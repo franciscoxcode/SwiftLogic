@@ -35,18 +35,29 @@ let letras = ["A", "B", "C"]
 //print(planetas[planetas.count - 1])
 //print(planetas.last!)
 
-let listaVacia: [String] = []
+//let listaVacia: [String] = []
+//
+//// 1. ¿Qué pasa si haces print(listaVacia[0])?
+//// 2. Usa `.first` para imprimir el primer elemento si existe.
+//// 3. Usa `.indices.contains(0)` para acceder de forma segura.
+//
+//print(listaVacia[0])
+//
+//if let first = listaVacia.first {
+//    print(first)
+//}
+//
+//if listaVacia.indices.contains(0){
+//    print(listaVacia[0])
+//}
 
-// 1. ¿Qué pasa si haces print(listaVacia[0])?
-// 2. Usa `.first` para imprimir el primer elemento si existe.
-// 3. Usa `.indices.contains(0)` para acceder de forma segura.
+let pasos = ["Inicio", "Carga", "Proceso", "Final"]
 
-print(listaVacia[0])
+// 1. Imprime el penúltimo paso (sin hardcodear el índice).
+// 2. Hazlo solo si el array tiene al menos 2 elementos.
 
-if let first = listaVacia.first {
-    print(first)
-}
+print(pasos[pasos.count - 2])
 
-if listaVacia.indices.contains(0){
-    print(listaVacia[0])
+if pasos.count >= 2 {
+    print(pasos[pasos.count - 2])
 }
