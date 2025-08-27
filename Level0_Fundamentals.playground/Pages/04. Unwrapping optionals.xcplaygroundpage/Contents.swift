@@ -114,6 +114,55 @@ import Foundation
 //
 //print(message?.uppercased() ?? "Sin mensaje")
 
-var username: String? = nil
+//var username: String? = nil
+//
+//print("Bienvenido, \(username ?? "Invitado").")
 
-print("Bienvenido, \(username ?? "Invitado").")
+//Ejercicio 1
+var nickname: String? = "Gato"
+
+print(nickname ?? "Invitado")
+
+
+//Ejercicio 2
+var a: Int? = 5
+var b: Int? = 100
+
+if let a = a, let b = b {
+    print("Suma: \(a + b)")
+} else {
+    print("Faltan datos")
+}
+
+//Ejercicio 3
+func checkAge(_ ageText: String?) {
+    guard let ageString = ageText,
+          let age = Int(ageString) else {
+        print("Edad inválida")
+        return
+    }
+    print(age >= 18 ? "Mayor de edad" : "Menor de edad")
+}
+
+checkAge("18")
+checkAge("15")
+checkAge(nil)
+
+
+//Ejercicio 4
+var firstName: String? = "Jorge"
+
+print("Hola, \(firstName ?? "visitante").")
+
+
+//Ejercicio 5
+func checkAccess(for user: String?, _ pass: String?) {
+    guard let user = user,
+          let pass = pass else {
+        print("Falta información")
+        return
+    }
+    print("Intentando acceso para \(user)")
+}
+
+checkAccess(for: "John", "1234")
