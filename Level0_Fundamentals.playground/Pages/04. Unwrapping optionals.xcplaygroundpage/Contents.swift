@@ -98,14 +98,22 @@ import Foundation
 //
 //print(email?.count.description ?? "No hay mail")
 
-struct User {
-    var profile: Profile?
-}
+//struct User {
+//    var profile: Profile?
+//}
+//
+//struct Profile {
+//    var bio: String?
+//}
+//
+//let user: User? = User(profile: Profile(bio: "Swift lover"))
+//
+//print(user?.profile?.bio ?? "Sin bio")
 
-struct Profile {
-    var bio: String?
-}
+//var message: String? = "hola max"
+//
+//print(message?.uppercased() ?? "Sin mensaje")
 
-let user: User? = User(profile: Profile(bio: "Swift lover"))
+var username: String? = nil
 
-print(user?.profile?.bio ?? "Sin bio")
+print("Bienvenido, \(username ?? "Invitado").")
