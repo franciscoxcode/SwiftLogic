@@ -61,31 +61,38 @@ import Foundation
 //printProfile(profile2)
 //printProf(profile2)
 
-struct User {
-    var name: String?
-    var email: String?
-    var age: Int?
-}
+//struct User {
+//    var name: String?
+//    var email: String?
+//    var age: Int?
+//}
+//
+//let user1 = User(name: "John", email: "why@gmail.com", age: 33)
+//let user2 = User(name: "Jack", email: nil, age: 40)
+//
+//func sendMessage(to user: User){
+//    guard let name = user.name else {
+//        print("No se puede enviar, faltan nombre")
+//        return
+//    }
+//    guard let email = user.email else {
+//        print("No se puede enviar, falta email")
+//        return
+//    }
+//    guard let age = user.age else {
+//        print("No se puede enviar, falta edad")
+//        return
+//    }
+//    
+//    print("Mensaje enviado a \(name) de \(age) años, con mail: \(email)")
+//}
+//
+//sendMessage(to: user1)
+//sendMessage(to: user2)
 
-let user1 = User(name: "John", email: "why@gmail.com", age: 33)
-let user2 = User(name: "Jack", email: nil, age: 40)
+var nickname: String? = nil
 
-func sendMessage(to user: User){
-    guard let name = user.name else {
-        print("No se puede enviar, faltan nombre")
-        return
-    }
-    guard let email = user.email else {
-        print("No se puede enviar, falta email")
-        return
-    }
-    guard let age = user.age else {
-        print("No se puede enviar, falta edad")
-        return
-    }
-    
-    print("Mensaje enviado a \(name) de \(age) años, con mail: \(email)")
-}
+print(nickname ?? "Invitado")
 
-sendMessage(to: user1)
-sendMessage(to: user2)
+
+
