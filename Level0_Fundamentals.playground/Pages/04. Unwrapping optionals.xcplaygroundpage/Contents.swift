@@ -94,7 +94,18 @@ import Foundation
 //
 //print(nickname ?? "Invitado")
 
-var email: String? = "max@mail.com"
+//var email: String? = "max@mail.com"
+//
+//print(email?.count.description ?? "No hay mail")
 
-print(email?.count.description ?? "No hay mail")
+struct User {
+    var profile: Profile?
+}
 
+struct Profile {
+    var bio: String?
+}
+
+let user: User? = User(profile: Profile(bio: "Swift lover"))
+
+print(user?.profile?.bio ?? "Sin bio")
