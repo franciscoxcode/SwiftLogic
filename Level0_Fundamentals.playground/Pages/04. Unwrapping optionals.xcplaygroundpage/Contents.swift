@@ -90,9 +90,11 @@ import Foundation
 //sendMessage(to: user1)
 //sendMessage(to: user2)
 
-var nickname: String? = nil
+//var nickname: String? = nil
+//
+//print(nickname ?? "Invitado")
 
-print(nickname ?? "Invitado")
+var email: String? = "max@mail.com"
 
-
+print(email?.count.description ?? "No hay mail")
 
