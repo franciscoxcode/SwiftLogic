@@ -166,3 +166,51 @@ func checkAccess(for user: String?, _ pass: String?) {
 }
 
 checkAccess(for: "John", "1234")
+
+//Ejercicio 6
+var value: Int? = 0
+
+if let value = value {
+    print(value > 0 ? "Positivo" : value < 0 ? "Negativo" : "Cero")
+} else {
+    print("Sin número")
+}
+
+//Ejercicio 7
+var price: Double? = 5.5
+print("Total: \(price ?? 0.0)")
+
+
+//Ejercicio 8
+
+func calculateDouble(for input: String?) {
+    
+    guard let inputInt = input,
+          let number = Int(inputInt) else {
+            print("No es un número.")
+        return
+    }
+    print("Doble: \(number*2)")
+}
+
+calculateDouble(for: nil)
+calculateDouble(for: "13")
+calculateDouble(for: "abc")
+
+//Ejercicio 9
+struct Person {
+    var nickname: String?
+}
+
+let person: Person? = Person(nickname: "Max")
+
+print(person?.nickname ?? "Sin nickname")
+
+//Ejercicio 10
+let isMember: Bool? = nil
+
+if let isMember = isMember {
+    print(isMember == true ? "Descuento aplicado" : "Sin descuento")
+} else {
+    print("Sin descuento")
+}
