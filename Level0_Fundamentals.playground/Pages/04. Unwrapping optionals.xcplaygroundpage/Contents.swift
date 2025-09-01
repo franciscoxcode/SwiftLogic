@@ -314,5 +314,25 @@ printDouble(of: "34.0")
 printDouble(of: "20")
 printDouble(of: "hello")
 
+//Ejercicio 9
+struct Contact {
+    var name: String?
+    var phone: String?
+}
 
+let contact: Contact? = Contact(name: "Max", phone: "234322342")
 
+print("\(contact?.name ?? "Sin nombre"): \(contact?.phone ?? "Sin número")")
+
+//ejercicio 10
+func isActive(_ isActive: Bool?) {
+    guard let isActive = isActive else {
+        print("Desconocido")
+        return
+    }
+    print(isActive ? "Activo" : "Inactivo")
+}
+
+isActive(true)
+isActive(false)
+isActive(nil)
