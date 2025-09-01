@@ -119,98 +119,200 @@ import Foundation
 //print("Bienvenido, \(username ?? "Invitado").")
 
 //Ejercicio 1
-var nickname: String? = "Gato"
+//var nickname: String? = "Gato"
+//
+//print(nickname ?? "Invitado")
+//
+//
+////Ejercicio 2
+//var a: Int? = 5
+//var b: Int? = 100
+//
+//if let a = a, let b = b {
+//    print("Suma: \(a + b)")
+//} else {
+//    print("Faltan datos")
+//}
+//
+////Ejercicio 3
+//func checkAge(_ ageText: String?) {
+//    guard let ageString = ageText,
+//          let age = Int(ageString) else {
+//        print("Edad inválida")
+//        return
+//    }
+//    print(age >= 18 ? "Mayor de edad" : "Menor de edad")
+//}
+//
+//checkAge("18")
+//checkAge("15")
+//checkAge(nil)
+//
+//
+////Ejercicio 4
+//var firstName: String? = "Jorge"
+//
+//print("Hola, \(firstName ?? "visitante").")
+//
+//
+////Ejercicio 5
+//func checkAccess(for user: String?, _ pass: String?) {
+//    guard let user = user,
+//          let pass = pass else {
+//        print("Falta información")
+//        return
+//    }
+//    print("Intentando acceso para \(user)")
+//}
+//
+//checkAccess(for: "John", "1234")
+//
+////Ejercicio 6
+//var value: Int? = 0
+//
+//if let value = value {
+//    print(value > 0 ? "Positivo" : value < 0 ? "Negativo" : "Cero")
+//} else {
+//    print("Sin número")
+//}
+//
+////Ejercicio 7
+//var price: Double? = 5.5
+//print("Total: \(price ?? 0.0)")
+//
+//
+////Ejercicio 8
+//
+//func calculateDouble(for input: String?) {
+//    
+//    guard let inputInt = input,
+//          let number = Int(inputInt) else {
+//            print("No es un número.")
+//        return
+//    }
+//    print("Doble: \(number*2)")
+//}
+//
+//calculateDouble(for: nil)
+//calculateDouble(for: "13")
+//calculateDouble(for: "abc")
+//
+////Ejercicio 9
+//struct Person {
+//    var nickname: String?
+//}
+//
+//let person: Person? = Person(nickname: "Max")
+//
+//print(person?.nickname ?? "Sin nickname")
+//
+////Ejercicio 10
+//let isMember: Bool? = nil
+//
+//if let isMember = isMember {
+//    print(isMember == true ? "Descuento aplicado" : "Sin descuento")
+//} else {
+//    print("Sin descuento")
+//}
 
-print(nickname ?? "Invitado")
+//Ejercicio 1
+var message: String? = "Todo bien"
+
+print(message ?? "Sin mensaje")
 
 
 //Ejercicio 2
-var a: Int? = 5
-var b: Int? = 100
 
-if let a = a, let b = b {
-    print("Suma: \(a + b)")
-} else {
-    print("Faltan datos")
+func printSum(_ x: Int?, _ y: Int?, _ z: Int?) {
+    guard let x = x,
+          let y = y,
+          let z = z else
+    {
+        print("No se puede calcular")
+        return
+    }
+    print(x + y + z)
 }
 
+printSum(5, 4, 3)
+printSum(nil, 3, 2)
+
 //Ejercicio 3
-func checkAge(_ ageText: String?) {
-    guard let ageString = ageText,
-          let age = Int(ageString) else {
+
+func isAdult(at age: String?) {
+    guard let age = age,
+          let ageInt = Int(age) else {
         print("Edad inválida")
         return
     }
-    print(age >= 18 ? "Mayor de edad" : "Menor de edad")
+    print(ageInt >= 18 ? "Es mayor de edad" : "Es menor de edad")
 }
 
-checkAge("18")
-checkAge("15")
-checkAge(nil)
-
+isAdult(at: "20")
+isAdult(at: "abc")
+isAdult(at: nil)
+isAdult(at: "13")
 
 //Ejercicio 4
-var firstName: String? = "Jorge"
+struct Profile {
+    var bio: String?
+}
 
-print("Hola, \(firstName ?? "visitante").")
+let profile: Profile? = Profile(bio: "Small bio.")
 
+print(profile?.bio ?? "Sin bio")
 
 //Ejercicio 5
-func checkAccess(for user: String?, _ pass: String?) {
-    guard let user = user,
-          let pass = pass else {
-        print("Falta información")
+func checkLogin(_ username: String?, _ password: String?) {
+    guard let username = username else {
+        print("Falta nombre de usuario.")
         return
     }
-    print("Intentando acceso para \(user)")
+    guard let password = password else {
+        print("Falta contraseña.")
+        return
+    }
+    print("Intentando login para \(username)")
 }
 
-checkAccess(for: "John", "1234")
+checkLogin("max", "1234")
+checkLogin(nil, "222")
+checkLogin("ryu", nil)
 
 //Ejercicio 6
-var value: Int? = 0
-
-if let value = value {
-    print(value > 0 ? "Positivo" : value < 0 ? "Negativo" : "Cero")
-} else {
-    print("Sin número")
-}
-
-//Ejercicio 7
-var price: Double? = 5.5
-print("Total: \(price ?? 0.0)")
-
-
-//Ejercicio 8
-
-func calculateDouble(for input: String?) {
-    
-    guard let inputInt = input,
-          let number = Int(inputInt) else {
-            print("No es un número.")
+func printProduct(of a: Int?, and b: Int?) {
+    guard let a = a,
+          let b = b else {
+        print("No hay suficientes datos.")
         return
     }
-    print("Doble: \(number*2)")
+    print(a*b)
 }
 
-calculateDouble(for: nil)
-calculateDouble(for: "13")
-calculateDouble(for: "abc")
+printProduct(of: 3, and: 4)
+printProduct(of: nil, and: 3)
 
-//Ejercicio 9
-struct Person {
-    var nickname: String?
+//Ejercicio 7
+func printArticleName(for title: String?) {
+    print("Artículo: \(title ?? "Sin título")")
 }
 
-let person: Person? = Person(nickname: "Max")
+printArticleName(for: "The Hobbit")
+printArticleName(for: nil)
 
-print(person?.nickname ?? "Sin nickname")
-
-//Ejercicio 10
-let isMember: Bool? = nil
-
-if let isMember = isMember {
-    print(isMember == true ? "Descuento aplicado" : "Sin descuento")
-} else {
-    print("Sin descuento")
+//Ejercicio 8
+func printDouble(of price: String?) {
+    guard let price = price,
+          let doubleNumber = Double(price) else {
+        print("Precio inválido.")
+        return
+    }
+    print("El precio es de \(doubleNumber)")
 }
+
+printDouble(of: "34.0")
+printDouble(of: "20")
+printDouble(of: "hello")
+
+
+
