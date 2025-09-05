@@ -215,124 +215,125 @@ import Foundation
 //    print("Sin descuento")
 //}
 
-//Ejercicio 1
-var message: String? = "Todo bien"
+////Ejercicio 1
+//var message: String? = "Todo bien"
+//
+//print(message ?? "Sin mensaje")
+//
+//
+////Ejercicio 2
+//
+//func printSum(_ x: Int?, _ y: Int?, _ z: Int?) {
+//    guard let x = x,
+//          let y = y,
+//          let z = z else
+//    {
+//        print("No se puede calcular")
+//        return
+//    }
+//    print(x + y + z)
+//}
+//
+//printSum(5, 4, 3)
+//printSum(nil, 3, 2)
+//
+////Ejercicio 3
+//
+//func isAdult(at age: String?) {
+//    guard let age = age,
+//          let ageInt = Int(age) else {
+//        print("Edad inválida")
+//        return
+//    }
+//    print(ageInt >= 18 ? "Es mayor de edad" : "Es menor de edad")
+//}
+//
+//isAdult(at: "20")
+//isAdult(at: "abc")
+//isAdult(at: nil)
+//isAdult(at: "13")
+//
+////Ejercicio 4
+//struct Profile {
+//    var bio: String?
+//}
+//
+//let profile: Profile? = Profile(bio: "Small bio.")
+//
+//print(profile?.bio ?? "Sin bio")
+//
+////Ejercicio 5
+//func checkLogin(_ username: String?, _ password: String?) {
+//    guard let username = username else {
+//        print("Falta nombre de usuario.")
+//        return
+//    }
+//    guard let password = password else {
+//        print("Falta contraseña.")
+//        return
+//    }
+//    print("Intentando login para \(username)")
+//}
+//
+//checkLogin("max", "1234")
+//checkLogin(nil, "222")
+//checkLogin("ryu", nil)
+//
+////Ejercicio 6
+//func printProduct(of a: Int?, and b: Int?) {
+//    guard let a = a,
+//          let b = b else {
+//        print("No hay suficientes datos.")
+//        return
+//    }
+//    print(a*b)
+//}
+//
+//printProduct(of: 3, and: 4)
+//printProduct(of: nil, and: 3)
+//
+////Ejercicio 7
+//func printArticleName(for title: String?) {
+//    print("Artículo: \(title ?? "Sin título")")
+//}
+//
+//printArticleName(for: "The Hobbit")
+//printArticleName(for: nil)
+//
+////Ejercicio 8
+//func printDouble(of price: String?) {
+//    guard let price = price,
+//          let doubleNumber = Double(price) else {
+//        print("Precio inválido.")
+//        return
+//    }
+//    print("El precio es de \(doubleNumber)")
+//}
+//
+//printDouble(of: "34.0")
+//printDouble(of: "20")
+//printDouble(of: "hello")
+//
+////Ejercicio 9
+//struct Contact {
+//    var name: String?
+//    var phone: String?
+//}
+//
+//let contact: Contact? = Contact(name: "Max", phone: "234322342")
+//
+//print("\(contact?.name ?? "Sin nombre"): \(contact?.phone ?? "Sin número")")
+//
+////ejercicio 10
+//func isActive(_ isActive: Bool?) {
+//    guard let isActive = isActive else {
+//        print("Desconocido")
+//        return
+//    }
+//    print(isActive ? "Activo" : "Inactivo")
+//}
+//
+//isActive(true)
+//isActive(false)
+//isActive(nil)
 
-print(message ?? "Sin mensaje")
-
-
-//Ejercicio 2
-
-func printSum(_ x: Int?, _ y: Int?, _ z: Int?) {
-    guard let x = x,
-          let y = y,
-          let z = z else
-    {
-        print("No se puede calcular")
-        return
-    }
-    print(x + y + z)
-}
-
-printSum(5, 4, 3)
-printSum(nil, 3, 2)
-
-//Ejercicio 3
-
-func isAdult(at age: String?) {
-    guard let age = age,
-          let ageInt = Int(age) else {
-        print("Edad inválida")
-        return
-    }
-    print(ageInt >= 18 ? "Es mayor de edad" : "Es menor de edad")
-}
-
-isAdult(at: "20")
-isAdult(at: "abc")
-isAdult(at: nil)
-isAdult(at: "13")
-
-//Ejercicio 4
-struct Profile {
-    var bio: String?
-}
-
-let profile: Profile? = Profile(bio: "Small bio.")
-
-print(profile?.bio ?? "Sin bio")
-
-//Ejercicio 5
-func checkLogin(_ username: String?, _ password: String?) {
-    guard let username = username else {
-        print("Falta nombre de usuario.")
-        return
-    }
-    guard let password = password else {
-        print("Falta contraseña.")
-        return
-    }
-    print("Intentando login para \(username)")
-}
-
-checkLogin("max", "1234")
-checkLogin(nil, "222")
-checkLogin("ryu", nil)
-
-//Ejercicio 6
-func printProduct(of a: Int?, and b: Int?) {
-    guard let a = a,
-          let b = b else {
-        print("No hay suficientes datos.")
-        return
-    }
-    print(a*b)
-}
-
-printProduct(of: 3, and: 4)
-printProduct(of: nil, and: 3)
-
-//Ejercicio 7
-func printArticleName(for title: String?) {
-    print("Artículo: \(title ?? "Sin título")")
-}
-
-printArticleName(for: "The Hobbit")
-printArticleName(for: nil)
-
-//Ejercicio 8
-func printDouble(of price: String?) {
-    guard let price = price,
-          let doubleNumber = Double(price) else {
-        print("Precio inválido.")
-        return
-    }
-    print("El precio es de \(doubleNumber)")
-}
-
-printDouble(of: "34.0")
-printDouble(of: "20")
-printDouble(of: "hello")
-
-//Ejercicio 9
-struct Contact {
-    var name: String?
-    var phone: String?
-}
-
-let contact: Contact? = Contact(name: "Max", phone: "234322342")
-
-print("\(contact?.name ?? "Sin nombre"): \(contact?.phone ?? "Sin número")")
-
-//ejercicio 10
-func isActive(_ isActive: Bool?) {
-    guard let isActive = isActive else {
-        print("Desconocido")
-        return
-    }
-    print(isActive ? "Activo" : "Inactivo")
-}
-
-isActive(true)
-isActive(false)
-isActive(nil)
